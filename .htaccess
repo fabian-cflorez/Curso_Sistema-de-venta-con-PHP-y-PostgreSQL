@@ -1,0 +1,11 @@
+#ARCHIVO PARA CREACION DE URLs AMIGABLES ASÍ COMO DENEGAR EL ACCESO A LAS CARPETAS DEL PROYECTO
+#Deniega el acceso a las carpetas
+Options All -Indexes
+#Activar motor de redireccion
+RewriteEngine On
+#Verifica si un directorio por el metodo REQUEST es valido
+RewriteCond %{REQUEST_FILENAME} !-d
+#Verifica si un archivo por el metodo REQUEST es valido
+RewriteCond %{REQUEST_FILENAME} !-f
+#Configuracion para almacenar en una variable url todo lo que contenga luego de index.php
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]

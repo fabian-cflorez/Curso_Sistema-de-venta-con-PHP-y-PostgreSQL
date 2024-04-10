@@ -1,0 +1,30 @@
+{
+    "githubIssues.queries": [
+        {
+            "label": "Mis incidencias",
+            "query": "default"
+        },
+        {
+            "label": "Problemas creados",
+            "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+        },
+        {
+            "label": "Problemas recientes",
+            "query": "state:open repo:${owner}/${repository} sort:updated-desc"
+        }
+    ],
+    "githubPullRequests.queries": [
+        {
+            "label": "Esperando por mi revisión",
+            "query": "is:open review-requested:${user}"
+        },
+        {
+            "label": "Asignado a mí",
+            "query": "is:open assignee:${user}"
+        },
+        {
+            "label": "Creado por mí",
+            "query": "is:open author:${user}"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+create table if not exists usuarios(id serial not null primary key, usuario varchar(50) not null unique, nombre varchar(100) not null, cla
+ve varchar(50) not null, id_rol int not null, id_caja int not null, estado int not null);
+
+insert into usuarios (usuario, nombre, clave, id_rol, id_caja, estado ) values ('admin', 'Fabian Carrasco', 'admin', 1, 1, 1);
+
+create table if not exists caja(id serial not null primary key, caja varchar(50), estado int);
